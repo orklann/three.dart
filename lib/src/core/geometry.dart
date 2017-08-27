@@ -37,9 +37,9 @@ class Geometry extends Object with WebGLGeometry {
   List<Vector3> __tmpVertices;
 
   BoundingBox boundingBox;
-  BoundingSphere boundingSphere;
+  BoundingSphere _boundingSphere;
 
-  get boundingSphere => boudingSphere;
+  get boundingSphere => _boundingSphere;
 
   bool hasTangents, _dynamic;
 
@@ -74,7 +74,7 @@ class Geometry extends Object with WebGLGeometry {
         skinIndices = [],
         lineDistances = [],
         boundingBox = null,
-        boundingSphere = null,
+        _boundingSphere = null,
         hasTangents = false,
         _dynamic =
             false // unless set to true the *Arrays will be deleted once sent to a buffer.
@@ -314,7 +314,7 @@ class Geometry extends Object with WebGLGeometry {
       return (radiusSq > curMaxRadiusSq) ? radiusSq : curMaxRadiusSq;
     });
 
-    boundingSphere = new BoundingSphere(radius: Math.sqrt(maxRadiusSq));
+    _boundingSphere = new BoundingSphere(radius: Math.sqrt(maxRadiusSq));
   }
 
   /// Checks for duplicate vertices with hashmap.
