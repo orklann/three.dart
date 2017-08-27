@@ -37,7 +37,9 @@ class Geometry extends Object with WebGLGeometry {
   List<Vector3> __tmpVertices;
 
   BoundingBox boundingBox;
-  BoundingSphere get boundingSphere;
+  BoundingSphere boundingSphere;
+
+  get boundingSphere => boudingSphere;
 
   bool hasTangents, _dynamic;
 
