@@ -2,7 +2,7 @@ library three;
 
 import 'dart:async';
 import 'dart:collection';
-import 'dart:html' hide Path;
+import 'dart:html';
 import 'dart:typed_data';
 import 'dart:web_gl' as gl;
 import 'dart:math' as Math;
@@ -180,7 +180,6 @@ const int FrontFaceDirectionCCW = 1;
 const int BasicShadowMap = 0;
 const int PCFShadowMap = 1;
 const int PCFSoftShadowMap = 2;
-
 
 // MATERIAL CONSTANTS
 
